@@ -1,0 +1,12 @@
+.counter-wrapper {
+    min-width: 15%;
+    min-height: 30%;
+    border-radius: 2rem;
+    border: 3px lightslategray solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, .55);
+}

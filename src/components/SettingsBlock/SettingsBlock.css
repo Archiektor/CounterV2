@@ -1,0 +1,27 @@
+.settings-wrapper {
+    min-width: 15%;
+    height: 100%;
+    border-radius: 2rem;
+    border: 3px lightslategray solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, .55);
+}
+
+.input {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    align-items: center;
+    padding: .5rem;
+    color: whitesmoke;
+    font-size: 1.25rem;
+}
+
+.input input {
+    max-width: 8rem;
+    margin-left: 1rem;
+    min-height: 2rem;
+}

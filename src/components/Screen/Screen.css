@@ -1,0 +1,31 @@
+.screen {
+    width: 90%;
+    height: 90%;
+    border: 3px lightslategray solid;
+    margin: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    color: #f55018;
+    background-color: lightslategray;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .55);
+}
+
+.screen-red {
+    animation: colorChange .5s ease-out;
+    color: firebrick;
+}
+
+@keyframes colorChange {
+    from {
+        color: #f55018;
+        rotate: 0deg;
+    }
+    to {
+        color: firebrick;
+        rotate: 360deg;
+    }
+}

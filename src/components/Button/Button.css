@@ -1,0 +1,19 @@
+.btn {
+    background-color: slategray;
+    padding: .75rem 2rem;
+    border-radius: 1.5rem;
+    margin: .25rem;
+    border: none;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, .55);
+}
+
+.btn-red {
+    background-color: rgba(140, 6, 6, 0.5);
+}
