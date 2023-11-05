@@ -24,4 +24,11 @@
     max-width: 8rem;
     margin-left: 1rem;
     min-height: 2rem;
+    text-align: center;
+    color: #171616;
+    font-size: 1.1rem;
+}
+
+.error {
+    background-color: rgba(178, 34, 34, .5);
 }

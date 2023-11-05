@@ -1,26 +1,31 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Counter.css';
 import {Screen} from '../Screen/Screen';
 import {Button} from '../Button/Button';
 
-export const Counter = () => {
-    const INIT_VALUE = 0;
-    const MAX_VALUE = 5;
+type CounterType = {
+    startValue: number
+    currentValue: number
+    endValue: number
+    setStartValue: (newValue: number) => void
+}
 
-    const [counter, setCounter] = useState<number>(INIT_VALUE);
+export const Counter: React.FC<CounterType> = ({startValue, currentValue, endValue, setStartValue}) => {
     const incrementCounter = () => {
-        setCounter(counter => counter + 1);
+        setStartValue(currentValue + 1);
     }
 
     const resetCounter = () => {
-        setCounter(INIT_VALUE);
+        setStartValue(startValue);
+        //localStorage.removeItem(LOCAL_STORAGE_KEY);
+        //localStorage.clear();
     }
 
     return (
         <div className={'counter-wrapper'}>
-            <Screen value={counter}/>
+            <Screen currentValue={currentValue} endValue={endValue}/>
             <div className={'btn-wrapper'}>
-                <Button name={'inc'} callback={incrementCounter} isDisabled={counter === MAX_VALUE}/>
+                <Button name={'inc'} callback={incrementCounter} isDisabled={currentValue === endValue}/>
                 <Button name={'reset'} callback={resetCounter}/>
             </div>
 

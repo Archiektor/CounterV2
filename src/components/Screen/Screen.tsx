@@ -2,15 +2,16 @@ import React from 'react';
 import './Screen.css';
 
 type ScreenType = {
-    value: number
+    currentValue: number
+    endValue: number
 }
 
-export const Screen: React.FC<ScreenType> = ({value}) => {
-    let additionalScreenClass = value === 5 ? 'screen-red' : ''
+export const Screen: React.FC<ScreenType> = ({currentValue, endValue}) => {
+    let additionalScreenClass = currentValue === endValue ? 'screen-red' : ''
 
     return (
         <div className={`screen`}>
-            <p className={additionalScreenClass}>{value}</p>
+            <p className={additionalScreenClass}>{currentValue}</p>
         </div>
     );
 }
