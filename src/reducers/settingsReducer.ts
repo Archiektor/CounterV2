@@ -4,12 +4,18 @@ export type settingObjStateType = {
     end: number
 }
 
-export const settingsReducer = (state: settingObjStateType, action: todolistsActionsType): settingObjStateType => {
+const initialState: settingObjStateType = {
+    start: 0,
+    current: 0,
+    end: 5
+}
+
+export const settingsReducer = (state = initialState, action: todolistsActionsType): settingObjStateType => {
     switch (action.type) {
         case "SET-NEW-STATE":
             return action.payload.newState;
         case "INCREMENT-STATE":
-            return {...action.payload.previousState, current: action.payload.previousState.current + 1  }
+            return {...action.payload.previousState, current: action.payload.previousState.current + 1}
         case "RESET-STATE":
             return {...action.payload.previousState, current: action.payload.previousState.start};
         default:
