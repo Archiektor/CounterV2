@@ -52,7 +52,7 @@ function App() {
         <div className="App">
             <div className={'app-wrapper'}>
                 <SettingsBlock state={settingsObj} setNewValue={setNewValue}/>
-                <Counter startValue={settingsObj[start]} endValue={settingsObj[end]} currentValue={settingsObj[current]} setStartValue={setCurrentValue}/>
+                {/*<Counter startValue={settingsObj[start]} endValue={settingsObj[end]} currentValue={settingsObj[current]} setStartValue={setCurrentValue}/>*/}
             </div>
         </div>
     );
